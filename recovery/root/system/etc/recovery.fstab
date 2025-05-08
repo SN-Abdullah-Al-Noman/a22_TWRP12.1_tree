@@ -27,17 +27,9 @@
 
 #<src>         <mnt_point>     <type>   <mnt_flags and options>   <fs_mgr_flags>
 system         /system         erofs    ro                        wait,logical,first_stage_mount
-system         /system         f2fs     ro                        wait,logical,first_stage_mount
-system         /system         ext4     ro                        wait,logical,first_stage_mount
 vendor         /vendor         erofs    ro                        wait,logical,first_stage_mount
-vendor         /vendor         f2fs     ro                        wait,logical,first_stage_mount
-vendor         /vendor         ext4     ro                        wait,logical,first_stage_mount
 product        /product        erofs    ro                        wait,logical,first_stage_mount
-product        /product        f2fs     ro                        wait,logical,first_stage_mount
-product        /product        ext4     ro                        wait,logical,first_stage_mount
 odm            /odm            erofs    ro                        wait,logical,first_stage_mount
-odm            /odm            f2fs     ro                        wait,logical,first_stage_mount
-odm            /odm            ext4     ro                        wait,logical,first_stage_mount
 
 # Block device
 /dev/block/platform/bootdevice/by-name/boot	/boot		emmc	defaults		recoveryonly
@@ -70,3 +62,9 @@ odm            /odm            ext4     ro                        wait,logical,f
 /dev/block/platform/bootdevice/by-name/cam_vpu2	/cam_vpu2	emmc	default			recoveryonly
 /dev/block/platform/bootdevice/by-name/cam_vpu3	/cam_vpu3	emmc	default			recoveryonly
 /dev/block/platform/bootdevice/by-name/pi_img	/pi_img		emmc	default			recoveryonly
+
+# Dynamic Partitions
+/odm_image     emmc     /dev/block/by-name/odm     flags=backup=1;flashimg=1;display="Odm Image";wipeingui
+/product_image     emmc     /dev/block/by-name/product     flags=backup=1;flashimg=1;display="Product Image";wipeingui
+/system_image     emmc     /dev/block/by-name/system     flags=backup=1;flashimg=1;display="System Image";wipeingui
+/vendor_image     emmc     /dev/block/by-name/vendor     flags=backup=1;flashimg=1;display="Vendor Image";wipeingui
