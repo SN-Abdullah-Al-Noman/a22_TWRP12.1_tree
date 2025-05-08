@@ -1,9 +1,8 @@
 # mount point          fstype   device                         flags
-/odm_image             emmc     /dev/block/mapper/odm          flags=backup=0;flashimg=1;display="Odm image"
-/product_image         emmc     /dev/block/mapper/product      flags=backup=0;flashimg=1;display="Product image"
-/system_image          emmc     /dev/block/mapper/system       flags=backup=0;flashimg=1;display="System image"
-/system_ext_image      emmc     /dev/block/mapper/system_ext   flags=backup=0;flashimg=1;display="System_Ext image"
-/vendor_image          emmc     /dev/block/mapper/vendor       flags=backup=0;flashimg=1;display="Vendor image"
+/odm_image             emmc     /dev/block/mapper/odm          flags=backup=0;flashimg=1;display="Odm"
+/product_image         emmc     /dev/block/mapper/product      flags=backup=0;flashimg=1;display="Product"
+/system_image          emmc     /dev/block/mapper/system       flags=backup=0;flashimg=1;display="System"
+/vendor_image          emmc     /dev/block/mapper/vendor       flags=backup=0;flashimg=1;display="Vendor"
 
 # Physical partitions
 /metadata              ext4     /dev/block/platform/bootdevice/by-name/metadata              flags=backup=1;display="Metadata";wipeingui
