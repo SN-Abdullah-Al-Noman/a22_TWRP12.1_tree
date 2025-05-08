@@ -14,9 +14,9 @@
 /dtbo                  emmc     /dev/block/platform/bootdevice/by-name/dtbo                  flags=backup=1;display="Dtbo"
 /param                 emmc     /dev/block/platform/bootdevice/by-name/param                 flags=backup=1;display="Param"
 /optics                ext4     /dev/block/platform/bootdevice/by-name/optics                flags=backup=1;display="Optics"
-/optics_image          emmc     /dev/block/platform/bootdevice/by-name/optics                flags=backup=1;flashimg;display="Optics Image"
+/optics_image          emmc     /dev/block/platform/bootdevice/by-name/optics                flags=backup=1;flashimg;display="Optics"
 /prism                 ext4     /dev/block/platform/bootdevice/by-name/prism                 flags=backup=1;display="Prism"
-/prism_image           emmc     /dev/block/platform/bootdevice/by-name/prism                 flags=backup=1;flashimg;display="Prism Image"
+/prism_image           emmc     /dev/block/platform/bootdevice/by-name/prism                 flags=backup=1;flashimg;display="Prism"
 /gz1                   emmc     /dev/block/platform/bootdevice/by-name/gz1
 /misc                  emmc     /dev/block/platform/bootdevice/by-name/misc                  flags=backup=1;display="Misc"
 /efs                   ext4     /dev/block/platform/bootdevice/by-name/sec_efs               flags=backup=1;display="EFS"
