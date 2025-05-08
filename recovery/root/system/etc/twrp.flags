@@ -1,10 +1,9 @@
-# mount point	fstype		     fstyle  device			device2				flags
-# Logical partitions
-system        /system        ext4    wait,logical,first_stage_mount
-vendor        /vendor        ext4    wait,logical,first_stage_mount
-product       /product       ext4    wait,logical,first_stage_mount
-odm           /odm           ext4    wait,logical,first_stage_mount
-system_ext    /system_ext    ext4    wait,logical,first_stage_mount
+# mount point          fstype   device                         flags
+/odm_image             emmc     /dev/block/mapper/odm          flags=backup=0;flashimg=1;display="Odm image"
+/product_image         emmc     /dev/block/mapper/product      flags=backup=0;flashimg=1;display="Product image"
+/system_image          emmc     /dev/block/mapper/system       flags=backup=0;flashimg=1;display="System image"
+/system_ext_image      emmc     /dev/block/mapper/system_ext   flags=backup=0;flashimg=1;display="System_Ext image"
+/vendor_image          emmc     /dev/block/mapper/vendor       flags=backup=0;flashimg=1;display="Vendor image"
 
 # Physical partitions
 /metadata	ext4		/dev/block/platform/bootdevice/by-name/metadata		flags=backup=1;display="Metadata";wipeingui
