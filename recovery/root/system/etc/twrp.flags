@@ -1,8 +1,9 @@
-# mount point          fstype   device                         flags
-/odm_image             emmc     /dev/block/mapper/odm          flags=backup=1;flashimg=1;display="Odm Image"
-/product_image         emmc     /dev/block/mapper/product      flags=backup=1;flashimg=1;display="Product Image"
-/system_image          emmc     /dev/block/mapper/system       flags=backup=1;flashimg=1;display="System Image"
-/vendor_image          emmc     /dev/block/mapper/vendor       flags=backup=1;flashimg=1;display="Vendor Image"
+# mount point             fstype   device     device2    flags
+# Logical partitions
+system          /system   erofs                 wait,logical,first_stage_mount
+vendor          /vendor   erofs                 wait,logical,first_stage_mount
+product         /product  erofs                 wait,logical,first_stage_mount
+odm             /odm      erofs                 wait,logical,first_stage_mount
 
 # physical partitions for backup and flashing
 /super_image           emmc     /dev/block/platform/bootdevice/by-name/super                 flags=backup=1;flashimg;display="Super Image"
