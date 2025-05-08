@@ -1,4 +1,4 @@
-# mount point             fstype   device     device2    flags
+# mount point             fstype                flags
 # Logical partitions
 system          /system   erofs                 wait,logical,first_stage_mount
 vendor          /vendor   erofs                 wait,logical,first_stage_mount
