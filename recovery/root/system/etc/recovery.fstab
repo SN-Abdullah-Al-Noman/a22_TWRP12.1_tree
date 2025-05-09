@@ -38,6 +38,7 @@ odm		/odm		ext4	ro,barrier=1			wait,logical,first_stage_mount
 /dev/block/platform/bootdevice/by-name/sec_efs	/efs		ext4	defaults		recoveryonly
 /dev/block/platform/bootdevice/by-name/misc	/misc		emmc	defaults		recoveryonly
 /dev/block/platform/bootdevice/by-name/metadata	/metadata	ext4	defaults		wait,first_stage_mount
+
 # external SD card
 /dev/block/mmcblk1p1				/sdcard		vfat	defaults		recoveryonly
 
@@ -62,14 +63,8 @@ odm		/odm		ext4	ro,barrier=1			wait,logical,first_stage_mount
 /dev/block/platform/bootdevice/by-name/cam_vpu3	/cam_vpu3	emmc	default			recoveryonly
 /dev/block/platform/bootdevice/by-name/pi_img	/pi_img		emmc	default			recoveryonly
 
-# Odm image entry. Added by DynaPatch
+# odm, product, system, vendor image entry. Added by DynaPatch
 /odm_image     emmc     /dev/block/mapper/odm     flags=backup=0;flashimg=1;display="Odm image"
-
-# Product image entry. Added by DynaPatch
 /product_image     emmc     /dev/block/mapper/product     flags=backup=0;flashimg=1;display="Product image"
-
-# System image entry. Added by DynaPatch
 /system_image     emmc     /dev/block/mapper/system     flags=backup=0;flashimg=1;display="System image"
-
-# Vendor image entry. Added by DynaPatch
 /vendor_image     emmc     /dev/block/mapper/vendor     flags=backup=0;flashimg=1;display="Vendor image"
